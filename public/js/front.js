@@ -5080,7 +5080,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'App',
+  name: "App",
   components: {
     NavBar: _components_NavBar__WEBPACK_IMPORTED_MODULE_0__["default"],
     // NavBar: NavBar,
@@ -5093,7 +5093,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     var _this = this;
-    axios.get('/api/posts').then(function (response) {
+    axios.get("/api/posts").then(function (response) {
       return _this.arrPosts = response.data.results;
     });
   }
@@ -11923,7 +11923,7 @@ var render = function () {
     [
       _c("NavBar"),
       _vm._v(" "),
-      _c("h1", [_vm._v("Io vengo da App")]),
+      _c("h1", [_vm._v("Questa è l'Home Page")]),
       _vm._v(" "),
       _c("main", [_c("router-view")], 1),
       _vm._v(" "),

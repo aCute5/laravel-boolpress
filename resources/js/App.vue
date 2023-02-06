@@ -1,7 +1,7 @@
 <template>
     <div>
         <NavBar />
-        <h1>Io vengo da App</h1>
+        <h1>Questa è l'Home Page</h1>
         <main>
             <router-view></router-view>
         </main>
@@ -26,27 +26,28 @@
 </template>
 
 <script>
-import NavBar from './components/NavBar';
-import FooterComponent from './components/FooterComponent';
+import NavBar from "./components/NavBar";
+import FooterComponent from "./components/FooterComponent";
 
 export default {
-  name: 'App',
-  components: {
-    NavBar, // NavBar: NavBar,
-    FooterComponent, // FooterComponent: FooterComponent,
-  },
-  data() {
-    return {
-        arrPosts: [],
-    };
-  },
-  created() {
-    axios.get('/api/posts')
-      .then(response => this.arrPosts = response.data.results);
-  }
-}
+    name: "App",
+    components: {
+        NavBar, // NavBar: NavBar,
+        FooterComponent, // FooterComponent: FooterComponent,
+    },
+    data() {
+        return {
+            arrPosts: [],
+        };
+    },
+    created() {
+        axios
+            .get("/api/posts")
+            .then((response) => (this.arrPosts = response.data.results));
+    },
+};
 </script>
 
 <style lang="scss">
-    @import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 </style>
